@@ -1,0 +1,17 @@
+CREATE DATABASE DI_Task1_2FA;
+USE DI_Task1_2FA;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(256) NOT NULL,
+    twofa_secret VARCHAR(256) NOT NULL
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(255),
+    price DECIMAL(10,2),
+    quantity INT
+);

@@ -1,0 +1,48 @@
+http://127.0.0.1:5000/register (Post)   
+http://127.0.0.1:5000/login    (Post)
+{
+    "username": "sara",
+    "password": "pass1234"
+}
+
+
+To get QR code
+http://127.0.0.1:5000/generate-2fa/sara  (in browser)
+
+
+http://127.0.0.1:5000/verify-2fa/sara (Post)
+{
+    "code": ""
+}
+
+
+To get all Products (Get)
+http://127.0.0.1:5000/products
+
+
+To add Product (Post) 
+http://127.0.0.1:5000/products
+Example:
+{
+    "name": "Laptop",
+    "description": "Gaming Laptop",
+    "price": 1200.50,
+    "quantity": 5
+}
+
+To delete product (Delete)
+http://127.0.0.1:5000/products/id
+
+
+
+To update product (Put)
+http://127.0.0.1:5000/products/id
+Example:
+{
+    "name": "Updated Laptop",
+    "description": "High-end Gaming Laptop",
+    "price": 1500.00,
+    "quantity": 3
+}
+
+
